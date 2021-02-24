@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AndesoftMachineTest</string>
+
+
+    <string name="empty_data">No Book Records Present</string>
+    <string name="book_name_title_txt">Book Name: </string>
+    <string name="book_author_name_title_txt">Author Name: </string>
+    <string name="book_price_title_txt">Book Price: </string>
+    <string name="book_date_of_issue_title_txt">Date of Issue: </string>
+    <string name="book_cover_photo_title_txt">Cover Photo: </string>
+
+    <string name="add_book_record">Add Book Records</string>
+
+    <string name="add_new_record_title_txt">Enter your book Records here....</string>
+
+    <string name="enter_book_name_title_txt">Enter Book Name: </string>
+    <string name="enter_book_author_name_title_txt">Select Author Name: </string>
+    <string name="enter_book_price_title_txt">Enter Book Price: </string>
+    <string name="enter_book_date_of_issue_title_txt">Select Date of Issue: </string>
+    <string name="select_images_title_txt">Select Images: </string>
+    <string name="choose_img_btn_txt">Choose Images</string>
+    <string name="images_selected_count_txt">Images Selected: </string>
+
+    <string name="submit_book_record">Submit</string>
+
+    <string name="home_screen_toolbar_title">Home Screen</string>
+    <string name="add_new_record_toolbar_title">Add New Record</string>
+</resources>

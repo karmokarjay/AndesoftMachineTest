@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/addNewBookRecord"
+        android:name="com.demo.andesoftmachinetest.ui.addNewBookScreen.AddNewBookRecordFragment"
+        android:label="@string/add_new_record_toolbar_title"
+        tools:layout="@layout/fragment_add_new_book_record">
+        <action
+            android:id="@+id/action_addNewBookRecord_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.demo.andesoftmachinetest.ui.homeScreen.HomeScreenFragment"
+        android:label="@string/home_screen_toolbar_title"
+        tools:layout="@layout/fragment_home_screen">
+        <action
+            android:id="@+id/action_homeScreenFragment_to_addNewBookRecord"
+            app:destination="@id/addNewBookRecord" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_imageSlider"
+            app:destination="@id/imageSlider" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/imageSlider"
+        android:name="com.demo.andesoftmachinetest.ui.ImageSlider"
+        android:label="ImageSlider"
+        tools:layout="@layout/image_slider_layout">
+        <argument
+            android:name="listOfBookImages"
+            app:argType="string[]" />
+    </dialog>
+
+</navigation>

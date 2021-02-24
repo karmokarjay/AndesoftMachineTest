@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_new_book_record_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.addNewBookScreen.AddNewBookRecordFragment">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/title_txt_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_20"
+                android:gravity="center"
+                android:text="@string/add_new_record_title_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_enter_book_name_title"
+                style="@style/title_header_txt_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_14"
+                android:layout_marginTop="@dimen/padding_14"
+                android:text="@string/book_name_title_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <EditText
+                android:id="@+id/ed_book_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/padding_14"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_marginEnd="@dimen/padding_14"
+                android:background="@color/light_grey"
+                android:hint="@string/enter_book_name_title_txt"
+                android:padding="@dimen/padding_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_enter_book_name_title" />
+
+            <TextView
+                android:id="@+id/tv_select_author_title"
+                style="@style/title_header_txt_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_14"
+                android:layout_marginTop="@dimen/padding_14"
+                android:text="@string/enter_book_author_name_title_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ed_book_name" />
+
+            <Spinner
+                android:id="@+id/author_name_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_40"
+                android:layout_marginStart="@dimen/padding_14"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_marginEnd="@dimen/padding_14"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_select_author_title" />
+
+            <TextView
+                android:id="@+id/tv_enter_book_price_title"
+                style="@style/title_header_txt_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_14"
+                android:layout_marginTop="@dimen/padding_14"
+                android:text="@string/book_price_title_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/author_name_spinner" />
+
+            <EditText
+                android:id="@+id/ed_book_price"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/padding_14"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="@dimen/padding_14"
+                android:background="@color/light_grey"
+                android:hint="@string/enter_book_price_title_txt"
+                android:inputType="number"
+                android:padding="@dimen/padding_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_enter_book_price_title" />
+
+            <TextView
+                android:id="@+id/tv_select_doi_title"
+                style="@style/title_header_txt_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_14"
+                android:layout_marginTop="@dimen/padding_14"
+                android:text="@string/enter_book_date_of_issue_title_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ed_book_price" />
+
+            <EditText
+                android:id="@+id/ed_doi_picker"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/padding_14"
+                android:layout_marginTop="@dimen/padding_8"
+                android:layout_marginEnd="@dimen/padding_14"
+                android:background="@color/light_grey"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="@string/enter_book_date_of_issue_title_txt"
+                android:padding="@dimen/padding_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_select_doi_title" />
+
+            <ImageView
+                android:id="@+id/iv_date_of_issue_picker_calendar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_8"
+                android:src="@drawable/calendar_icon"
+                app:layout_constraintBottom_toBottomOf="@id/ed_doi_picker"
+                app:layout_constraintEnd_toEndOf="@id/ed_doi_picker"
+                app:layout_constraintTop_toTopOf="@id/ed_doi_picker" />
+
+            <TextView
+                android:id="@+id/tv_select_images_title"
+                style="@style/title_header_txt_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_14"
+                android:layout_marginTop="@dimen/padding_40"
+                android:text="@string/select_images_title_txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ed_doi_picker" />
+
+            <Button
+                android:id="@+id/btn_image_chooser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_20"
+                android:background="@color/light_grey"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/choose_img_btn_txt"
+                app:layout_constraintBottom_toBottomOf="@id/tv_select_images_title"
+                app:layout_constraintStart_toEndOf="@id/tv_select_images_title"
+                app:layout_constraintTop_toTopOf="@id/tv_select_images_title" />
+
+            <TextView
+                android:id="@+id/tv_images_selected_count"
+                style="@style/title_header_txt_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_14"
+                android:layout_marginTop="@dimen/padding_10"
+                tools:text="@string/images_selected_count_txt"
+                app:layout_constraintEnd_toEndOf="@+id/btn_image_chooser"
+                app:layout_constraintStart_toStartOf="@+id/btn_image_chooser"
+                app:layout_constraintTop_toBottomOf="@id/btn_image_chooser" />
+
+            <TextView
+                android:id="@+id/tv_submit_book_records"
+                style="@style/submit_btn_txt_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_40"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_10"
+                android:paddingBottom="@dimen/padding_10"
+                android:text="@string/submit_book_record"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_images_selected_count" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
